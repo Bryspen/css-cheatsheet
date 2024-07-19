@@ -1,0 +1,25 @@
+* {
+    background-color: var(--dark);
+
+}
+:root{
+    --light:#C7EDE4;
+    --light-mid:#D5FFF3;
+    --medium:#AF9AB2;
+    --mid-dark:#820B8A;
+    --dark:#672A4E;
+}
+
+header{
+    color: var(--medium);
+    background-color: var(--dark);
+    
+}
+
+.grid{
+    display: grid;
+}
+
+.card{
+    
+}

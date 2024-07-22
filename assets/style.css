@@ -34,13 +34,12 @@ header{
     border: 1px solid var(--medium);
     border-radius:var(--border-radius) ; 
     margin: 25px;
+    text-align:center
 }    
 
 .linear-gradient-background{
-background-image: linear-gradient(var(--medium) 0%, var(--extra-dark) 100%);
+    background-image: linear-gradient(var(--medium) 0%, var(--extra-dark) 100%);
 }
-    
-
 
 .grid{
     display:grid;
@@ -53,12 +52,11 @@ background-image: linear-gradient(var(--medium) 0%, var(--extra-dark) 100%);
 .box{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border: 5px solid var(--medium);
+    border: 5px dotted var(--medium);
     background-color: var(--mid-dark);
     border-radius: var(--border-radius);
-  
+    transition: all 0.5s ease-in-out;
 }
 
 .card-header{
@@ -68,6 +66,7 @@ background-image: linear-gradient(var(--medium) 0%, var(--extra-dark) 100%);
     background-color: var(--extra-dark);
     border-radius: var(--border-radius);
     padding: 5px;
+    transition: all 0.5s ease-in-out;
 }
 
 pre{
@@ -76,5 +75,43 @@ pre{
     font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     border-radius: var(--border-radius);
     width: 100%;
-    
+    transition: all 0.5s ease-in-out;
+    -webkit-user-select: all;
+    user-select:all ; 
+
+}
+
+.box:hover{
+    box-shadow: inset 0px 0px 8px var(--medium), 0 0 15px var(--light-mid);
+}
+
+.card-header:hover{
+    box-shadow: inset 0px 0px 8px var(--medium), 0 0 15px var(--light-mid);
+}
+
+pre:hover{
+    box-shadow: inset 0px 0px 8px var(--medium), 0 0 15px var(--light-mid);
+}
+
+footer{
+    text-align: center;
+}
+
+@media screen and (max-width 992px) {
+    .grid{
+        display:flex;
+        width: 100%;
+        grid-template-columns:repeat(2, 1fr) ; 
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width 768px) {
+    .grid{
+        display:grid;
+        width: 100%;
+        grid-template-columns:repeat(1, 1fr) ; 
+        grid-template-rows: repeat(12, 1fr);
+        gap: 20px;
 }

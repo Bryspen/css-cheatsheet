@@ -57,6 +57,7 @@ header{
     background-color: var(--mid-dark);
     border-radius: var(--border-radius);
     transition: all 0.5s ease-in-out;
+    min-width: 0;
 }
 
 .card-header{
@@ -67,11 +68,12 @@ header{
     border-radius: var(--border-radius);
     padding: 5px;
     transition: all 0.5s ease-in-out;
+    text-align: center;
 }
 
 pre{
     color: var(--light-mid);
-    font-size: 32px;
+    font-size: 16px;
     font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     border-radius: var(--border-radius);
     width: 100%;
@@ -97,21 +99,21 @@ footer{
     text-align: center;
 }
 
-@media screen and (max-width 992px) {
+@media screen and (max-width: 992px) {
     .grid{
-        display:flex;
-        width: 100%;
-        grid-template-columns:repeat(2, 1fr) ; 
-        grid-template-rows: repeat(3, 1fr);
-        gap: 20px;
+
+        grid-template-columns:repeat(2, 1fr); 
     }
 }
 
-@media screen and (max-width 768px) {
+    .box{
+        flex-wrap: wrap;
+        
+    }
+@media screen and (max-width: 768px) {
     .grid{
         display:grid;
-        width: 100%;
         grid-template-columns:repeat(1, 1fr) ; 
-        grid-template-rows: repeat(12, 1fr);
         gap: 20px;
+    }
 }
